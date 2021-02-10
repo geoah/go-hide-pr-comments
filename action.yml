@@ -1,0 +1,24 @@
+name: 'go-hide-pr-comments'
+description: 'Github Action to hide Bot comments'
+branding:
+  color: gray-dark
+  icon: delete
+author: 'geoah'
+inputs:
+  pr_number:
+    description: 'The GitHub PR number'
+    required: false
+  github_token:
+    description: 'The GitHub token used to create an authenticated client'
+    required: true
+  hide_user_name:
+    description: 'Github username to hide comments'
+    default: 'github-actions[bot]'
+    required: false
+  hide_reason:
+    description: 'Reasons to hide comments'
+    default: 'OUTDATED'
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
