@@ -1,0 +1,1 @@
+# go-hide-pr-comments
